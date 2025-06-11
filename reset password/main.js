@@ -17,6 +17,7 @@ function confirm(e){
         if(inputPassword.value === inputConfirmPassword.value){
             message.innerHTML = ''
             inputConfirmPassword.style.borderColor =' #BFBFBF'
+            window.location.href = '../password_changed/index.html'
          }else{
             message.innerHTML='password does not match'
             inputConfirmPassword.style.borderColor =' #EB4335'

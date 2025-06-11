@@ -42,3 +42,18 @@ inputs.forEach((input,index1) => {
     
 
 window.addEventListener("load",() => inputs[0].focus())
+
+btnVerify.addEventListener('click', func)
+
+function func(e){
+    const email = emailInput.value.trim()
+
+    fetch(`${API_BASE}/ verify-otp`, {
+        method: 'POST',
+        header: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email,otp:code})
+
+    })
+    .then(res => res.json().then(data => ({status:res.status, ok: res.ok, body:data})))
+    
+}
