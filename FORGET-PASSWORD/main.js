@@ -9,13 +9,23 @@ form.addEventListener('submit',doThis)
 function doThis(e){
     e.preventDefault()
     const email = emailInput.value.trim()
-    fetch('https://my-style-mag-backend.onrender.com/api/v1/auth/send-otp', {
+    fetch('https://my-style-mag-backend.onrender.com/api/v1/forgotPassword', {
         method:"POST",
         headers:{'Content-Type': 'application/json' },
         body: JSON.stringify({email})
     })
     .then(res => res.json())
-    .then(data)
+    .then(data =>{
+        console.log(data)
+        if( data.message === `Email sent Successfully to ${email}` ){
+            window.location.href = "../OTP/index.html"
+        }
+        else{
+            alert("Invalid Email")
+        }
+    })
+
+
     
 
     .catch(err => {

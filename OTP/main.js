@@ -46,24 +46,35 @@ window.addEventListener("load",() => inputs[0].focus())
 btnVerify.addEventListener('click', func)
 
 function func(e){
-    const otp = Array.from(inputs).map(i => i.value).join('')
+    e.preventDefault()
+    const otp= Array.from(inputs).map(i => i.value).join('')
     const email = localStorage.getItem('userEmail')
 
-    fetch('https://my-style-mag-backend.onrender.com/api/v1/auth/verify-otp', {
-        method: "POST",
+    fetch('https://my-style-mag-backend.onrender.com/api/v1/verifyResetToken', {
         headers:{"Content-Type": 'application/json'},
         body: JSON.stringify({email, otp})
     })
-    .then(res => res.json())
+    .then(res => {
+        console.log(res)
+    })
     .then(data => {
-        if(data.message){
-            document.getElementById('response').innerHTML = email
+        console.log(data.resetToken)
+        console.log(data.email)
+        
+        if(data.resetToken === otp){
+            window.location.href = '../reset password/index.html'
+            
         }
     })
+        
+    
 
-    .catch(err => {
+
+    .catch (err => {
         console.log(err)
-    })
+    }) 
+    }
+
+   
 
     
-}
