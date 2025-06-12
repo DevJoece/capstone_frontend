@@ -14,7 +14,7 @@
     }
     .left-panel {
       flex: 1;
-      background: #D46E30;
+      background: #E26A2D;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -93,11 +93,11 @@
       transition: border 0.2s;
     }
     .forgot-input:focus {
-      border: 1.5px solid #D46E30;
+      border: 1.5px solid #E26A2D;
     }
     .forgot-btn {
       width: 100%;
-      background: #D46E30;
+      background: #E26A2D;
       color: #fff;
       font-weight: bold;
       border: none;

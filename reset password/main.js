@@ -33,12 +33,12 @@ function confirm(e){
 function togglePassword(e){
     if(inputPassword.type == "password"){
         inputPassword.type = "text"
-        eyePassword.classList.remove("fa-regular fa-eye-slash")
-        eyePassword.classList.add("fa-regular fa-eye")
+        eyePassword.classList.remove("fa-eye-slash")
+        eyePassword.classList.add("fa-eye")
     }else{
         inputPassword.type = "password"
-        eyePassword.classList.remove("fa-regular fa-eye")
-        eyePassword.classList.add("fa-regular fa-eye-slash")
+        eyePassword.classList.remove("fa-eye")
+        eyePassword.classList.add("fa-eye-slash")
     }
 
 
@@ -47,11 +47,11 @@ function togglePassword(e){
 function toggleConfirmPassword(e){
         if(inputConfirmPassword.type == "password"){
             inputConfirmPassword.type = "text"
-            eyeConfirm.classList.remove("fa-regular fa-eye-slash")
-            eyeConfirm.classList.add("fa-regular fa-eye")
+            eyeConfirm.classList.remove("fa-eye-slash")
+            eyeConfirm.classList.add("fa-eye")
         }else{
             inputConfirmPassword.type = "password"
-            eyeConfirm.classList.remove("fa-regular fa-eye")
-            eyeConfirm.classList.add("fa-regular fa-eye-slash")
+            eyeConfirm.classList.remove("fa-eye")
+            eyeConfirm.classList.add("fa-eye-slash")
         }
     }
