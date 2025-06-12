@@ -1,22 +1,24 @@
 let forgotBtn = document.querySelector('.forgot-btn')
 let emailInput = document.getElementById('email')
+localStorage.setItem('userEmail', emailInput)
 let form = document.querySelector('.forgot-container')
 
-const API_BASE = 'https://my-style-mag-backend.onrender.com/api/v1/auth'
 
 form.addEventListener('submit',doThis)
 
 function doThis(e){
     e.preventDefault()
-    const email = emailInput.ariaValueMax.trim()
-    fetch(`${API_BASE}/ send-otp`, {
-        method:'POST',
-        headers:
-        { 'content-Type': 'application/json'},
-        body:
-        JSON.stringify({email,otp:code})
-
+    const email = emailInput.value.trim()
+    fetch('https://my-style-mag-backend.onrender.com/api/v1/auth/send-otp', {
+        method:"POST",
+        headers:{'Content-Type': 'application/json' },
+        body: JSON.stringify({email})
     })
-    .then(res => res.json().then(data => ({status: res.status, ok:res.ok, body:data})))
+    .then(res => res.json())
+    .then(data)
     
+
+    .catch(err => {
+        console.log(err)
+    })
 }

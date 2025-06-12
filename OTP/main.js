@@ -46,14 +46,24 @@ window.addEventListener("load",() => inputs[0].focus())
 btnVerify.addEventListener('click', func)
 
 function func(e){
-    const email = emailInput.value.trim()
+    const otp = Array.from(inputs).map(i => i.value).join('')
+    const email = localStorage.getItem('userEmail')
 
-    fetch(`${API_BASE}/ verify-otp`, {
-        method: 'POST',
-        header: {'Content-Type': 'application/json'},
-        body: JSON.stringify({email,otp:code})
-
+    fetch('https://my-style-mag-backend.onrender.com/api/v1/auth/verify-otp', {
+        method: "POST",
+        headers:{"Content-Type": 'application/json'},
+        body: JSON.stringify({email, otp})
     })
-    .then(res => res.json().then(data => ({status:res.status, ok: res.ok, body:data})))
+    .then(res => res.json())
+    .then(data => {
+        if(data.message){
+            document.getElementById('response').innerHTML = email
+        }
+    })
+
+    .catch(err => {
+        console.log(err)
+    })
+
     
 }
