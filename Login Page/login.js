@@ -13,7 +13,7 @@ togglePassword.addEventListener("click", function () {
   // Add animation class
   this.classList.add("animate");
 
-  // Remove it after animation completes (400ms matches the CSS transition)
+  // Remove it after animation completes
   setTimeout(() => {
     this.classList.remove("animate");
   }, 400);
@@ -30,6 +30,9 @@ const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
 const loginButton = document.querySelector(".btn");
 
+// Suggestion #1: General error message container (add this <p id="generalError" class="error-message"></p> in your HTML)
+const generalError = document.getElementById("generalError");
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -37,8 +40,16 @@ form.addEventListener("submit", function (e) {
   const password = typePassword.value.trim();
   let isValid = true;
 
+  // Clear general error message on submit
+  generalError.textContent = "";
+
+  // Suggestion #3: Email format validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email) {
     showError(emailError, "Email is required", typeEmail);
+    isValid = false;
+  } else if (!emailRegex.test(email)) {
+    showError(emailError, "Enter a valid email address", typeEmail);
     isValid = false;
   }
 
@@ -48,9 +59,11 @@ form.addEventListener("submit", function (e) {
   }
 
   if (isValid) {
-    // Disable button and show loading text
+    // Disable button and inputs while fetching
     loginButton.textContent = "Logging in...";
     loginButton.disabled = true;
+    typeEmail.disabled = true;
+    typePassword.disabled = true;
 
     fetch("https://my-style-mag-backend.onrender.com/api/v1/login", {
       method: "POST",
@@ -77,12 +90,16 @@ form.addEventListener("submit", function (e) {
       })
       .catch((error) => {
         console.error("Error:", error);
-        showError(passwordError, "Invalid email or password", typePassword);
+        // Suggestion #1: Show error in general error message container
+        generalError.textContent = error.message;
+        generalError.classList.add("show");
       })
       .finally(() => {
-        // Reset button state
+        // Reset button state and inputs
         loginButton.textContent = "Log In";
         loginButton.disabled = false;
+        typeEmail.disabled = false;
+        typePassword.disabled = false;
       });
   }
 });
@@ -99,12 +116,16 @@ typeEmail.addEventListener("input", () => {
   emailError.textContent = "";
   emailError.classList.remove("show");
   typeEmail.classList.remove("input-error");
+  generalError.textContent = "";
+  generalError.classList.remove("show");
 });
 
 typePassword.addEventListener("input", () => {
   passwordError.textContent = "";
   passwordError.classList.remove("show");
   typePassword.classList.remove("input-error");
+  generalError.textContent = "";
+  generalError.classList.remove("show");
 });
 
 
