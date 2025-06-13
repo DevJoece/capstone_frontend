@@ -51,21 +51,27 @@ function func(e){
     const email = localStorage.getItem('userEmail')
 
     fetch('https://my-style-mag-backend.onrender.com/api/v1/verifyResetToken', {
-        headers:{"Content-Type": 'application/json'},
-        body: JSON.stringify({email, otp})
+        method:"POST",
+        headers:{
+            'Content-Type': 'application/json',
+            'accept': 'application/json'
+
+         },
+        body: JSON.stringify({
+            email: email,
+            resetToken: otp
+        })
     })
-    .then(res => {
-        console.log(res)
-    })
+    .then(res => res.json())
     .then(data => {
-        console.log(data.resetToken)
-        console.log(data.email)
-        
-        if(data.resetToken === otp){
+        console.log(data)
+        localStorage.setItem('userEmail', data.email)
+        localStorage.setItem('otp',data.resetToken)
+        setTimeout(() => {
             window.location.href = '../reset password/index.html'
-            
-        }
-    })
+        }, 1000)
+        })
+    
         
     
 
@@ -73,8 +79,8 @@ function func(e){
     .catch (err => {
         console.log(err)
     }) 
-    }
+    
 
    
 
-    
+} 

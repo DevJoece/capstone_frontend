@@ -10,25 +10,66 @@ eyePassword.addEventListener('click',togglePassword)
 eyeConfirm.addEventListener('click',toggleConfirmPassword)
 
 
+
 function confirm(e){
     e.preventDefault()
+    const email = localStorage.getItem('userEmail')
+    const resetToken = localStorage.getItem('otp')
+    let passwordValue = inputPassword.value
+    let confirmPasswordValue = inputConfirmPassword.value
+
     console.log(inputPassword.value,inputConfirmPassword.value)
-    if(inputPassword.value !== 0){
-        if(inputPassword.value === inputConfirmPassword.value){
+    if(passwordValue !== 0){
+        if(passwordValue === confirmPasswordValue){
             message.innerHTML = ''
             inputConfirmPassword.style.borderColor =' #BFBFBF'
-            window.location.href = '../password_changed/index.html'
+            
          }else{
             message.innerHTML='password does not match'
             inputConfirmPassword.style.borderColor =' #EB4335'
          }
     }
-    if(inputPassword.value === ''){
+    if(passwordValue === ''){
         alert('please enter your password')
     }
 
+    fetch('https://my-style-mag-backend.onrender.com/api/v1/changePassword',
+        {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+                'accept': 'application/json'
+            },
+            body:JSON.stringify({
+                newPassword:passwordValue,
+                resetToken:resetToken,
+                email:email
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            console.log(localStorage.getItem('userEmail'))
+            console.log(localStorage.getItem('otp'))
+            localStorage.clear()
+            setTimeout(() => {
+                window.location.href = '../password_changed/index.html'
+            }, 1500)
+        })
 
+        .catch((err) => {
+            console.log(err)
+        })
+    
+    
 }
+    
+
+    
+
+
+
+
 
 function togglePassword(e){
     if(inputPassword.type == "password"){
