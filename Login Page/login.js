@@ -86,7 +86,7 @@ form.addEventListener("submit", function (e) {
         console.log(data);
         localStorage.setItem("token", data.token);
         localStorage.setItem("user", JSON.stringify(data.user));
-        window.location.href = "../blog page/index.html";
+        window.location.href = "dashboard.html";
       })
       .catch((error) => {
         console.error("Error:", error);
