@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1024" />
+  <title>AfriStyle Users Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div>
+        <div class="logo">
+          <!-- Logo image at the side of AfriStyle -->
+          <img src="Assets/afrilogo.jpg" alt="AfriStyle Logo" class="logo-img" />
+          AfriStyle
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <span class="sidebar-icon">
+                <!-- Dashboard SVG Icon -->
+                <img src="Assets/dashboard.jpg" alt="dashboard" height="20">
+              </span>
+              Dashboard
+            </li>
+            <li>
+              <span class="sidebar-icon">
+                <!-- Styles SVG Icon -->
+               <img src="Assets/styles.jpg" alt="styles" height="20">
+              </span>
+              Styles
+            </li>
+            <li>
+              <span class="sidebar-icon">
+                <!-- Blogs SVG Icon -->
+                <img src="Assets/blogs.png" alt="blogs" height="20">
+              </span>
+              Blogs
+            </li>
+            <li class="active">
+              <span class="sidebar-icon">
+                <!-- Users SVG Icon -->
+                <img src="Assets/user.png" alt="user" height="20">
+              </span>
+              Users
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="logout">
+      <img src="Assets/logout.png" alt="Logout" class="logout-img" height="20"/> Log out
+</div>
+    </aside>
+    <main class="main-content">
+      <header class="main-header">
+        <input class="search-bar" type="text" placeholder="Search blogs, styles, users..."/>
+        <div class="header-actions">
+           <img class="icon-bell" src="Assets/notification.png" alt="Notifications" />
+          <span class="admin-avatar">
+            <img src="Assets/Frame 895.jpg" alt="Admin"/>
+            <span>
+              Adam Smith<br/>
+              <small>adamsmith@gmail.com</small>
+            </span>
+          </span>
+        </div>
+      </header>
+      <section class="users-section">
+        <h2>Users <span class="users-count">(1245)</span></h2>
+        <div class="users-toolbar">
+          <input class="table-search" placeholder="Search user"/>
+          <div class="toolbar-actions">
+            <button>Export</button>
+            <button>Filter</button>
+            <button class="add-user">+ Add User</button>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table class="users-table">
+            <thead>
+              <tr>
+                <th><input type="checkbox" /></th>
+                <th>User</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Last active</th>
+                <th>Date joined</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"/></td>
+                <td><img src="Assets/Frame 895.jpg" class="user-avatar" alt="avatar"/>Savannah Nguyen</td>
+                <td>savannahnguyen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>17 Oct, 2020</td>
+                <td>24 May, 2020</td>
+                <td class="td-dots">⋮</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"/></td>
+                <td><img src="Assets/Frame 895.jpg" class="user-avatar" alt="avatar"/>Marvin McKinney</td>
+                <td>savannahnguyen@gmail.com</td>
+                <td><span class="status-badge status-deleted">Deleted</span></td>
+                <td>21 Sep, 2020</td>
+                <td>17 Oct, 2020</td>
+                <td class="td-dots">⋮</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"/></td>
+                <td><img src="Assets/Frame 895.jpg" class="user-avatar" alt="avatar"/>Dianne Russell</td>
+                <td>savannahnguyen@gmail.com</td>
+                <td><span class="status-badge status-deleted">Deleted</span></td>
+                <td>1 Feb, 2020</td>
+                <td>17 Oct, 2020</td>
+                <td class="td-dots">⋮</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"/></td>
+                <td><img src="Assets/Frame 895.jpg" class="user-avatar" alt="avatar"/>Cameron Williamson</td>
+                <td>savannahnguyen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>22 Oct, 2020</td>
+                <td>17 Oct, 2020</td>
+                <td class="td-dots">⋮</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"/></td>
+                <td><img src="Assets/Frame 895.jpg" class="user-avatar" alt="avatar"/>Eleanor Pena</td>
+                <td>savannahnguyen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>22 Oct, 2020</td>
+                <td>17 Oct, 2020</td>
+                <td class="td-dots">⋮</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"/></td>
+                <td><img src="Assets/Frame 895.jpg" class="user-avatar" alt="avatar"/>Arlene McCoy</td>
+                <td>savannahnguyen@gmail.com</td>
+                <td><span class="status-badge status-paid">Paid</span></td>
+                <td>17 Oct, 2020</td>
+                <td>8 Sep, 2020</td>
+                <td class="td-dots">⋮</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"/></td>
+                <td><img src="Assets/Frame 895.jpg" class="user-avatar" alt="avatar"/>Devon Lane</td>
+                <td>savannahnguyen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>24 May, 2020</td>
+                <td>1 Feb, 2020</td>
+                <td class="td-dots">⋮</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"/></td>
+                <td><img src="Assets/Frame 895.jpg" class="user-avatar" alt="avatar"/>Floyd Miles</td>
+                <td>savannahnguyen@gmail.com</td>
+                <td><span class="status-badge status-deleted">Deleted</span></td>
+                <td>22 Oct, 2020</td>
+                <td>17 Oct, 2020</td>
+                <td class="td-dots">⋮</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"/></td>
+                <td><img src="Assets/Frame 895.jpg" class="user-avatar" alt="avatar"/>Kristin Watson</td>
+                <td>savannahnguyen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>8 Sep, 2020</td>
+                <td>1 Feb, 2020</td>
+                <td class="td-dots">⋮</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"/></td>
+                <td><img src="Assets/Frame 895.jpg" class="user-avatar" alt="avatar"/>Leslie Alexander</td>
+                <td>savannahnguyen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>1 Feb, 2020</td>
+                <td>1 Feb, 2020</td>
+                <td class="td-dots">⋮</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"/></td>
+                <td><img src="Assets/Frame 895.jpg" class="user-avatar" alt="avatar"/>Wade Warren</td>
+                <td>savannahnguyen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>1 Feb, 2020</td>
+                <td>1 Feb, 2020</td>
+                <td class="td-dots">⋮</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"/></td>
+                <td><img src="Assets/Frame 895.jpg" class="user-avatar" alt="avatar"/>Courtney Henry</td>
+                <td>savannahnguyen@gmail.com</td>
+                <td><span class="status-badge status-deleted">Deleted</span></td>
+                <td>21 Sep, 2020</td>
+                <td>1 Feb, 2020</td>
+                <td class="td-dots">⋮</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination-row">
+          <div>
+            Rows per Page:
+            <select>
+              <option>12</option>
+              <option>24</option>
+              <option>36</option>
+            </select>
+          </div>
+          <div class="pagination">
+            <span>&lt;</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span class="pagination-divider"></span>
+            <span>19</span>
+            <span>20</span>
+            <span>&gt;</span>
+          </div>
+          <div>Showing 1 - 12 of 1245</div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
