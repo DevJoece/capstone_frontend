@@ -244,6 +244,53 @@ body {
     border-bottom: 1px solid #f3f3f3;
 
   }
+  
+  .menu-wrapper{
+    position: relative;
+  }
+  .menu-options{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    padding: 4px, 0;
+    gap: 8px;
+    background: #fff;
+    right: 20px;
+    top: 0px;
+    width: 165px;
+    height: 70px;
+    z-index: 1;
+    border-radius: 8px;
+    visibility: hidden;
+    /* opacity: 0; */
+  }
+  #btn,
+  .edit,
+  .delete{
+    background: none;
+    border: none;
+    cursor: pointer;
+
+  }
+
+  .edit,
+  .delete{
+    padding-right: 16px;
+    padding-left: 16px;
+    font-family: 'Inter',sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: -4%;
+    font-weight: 400;
+    line-height: 16px;
+    height: 35px;
+  }
+  .edit{
+    color: #0B0B0B;
+  }
+  .delete{
+    color: #DF1C41;
+  }
   .author-avatar {
     width: 28px;
     height: 28px;
@@ -310,6 +357,8 @@ body {
     background: #f47b3a;
     color: #fff;
   }
+
+
 
   @media (max-width: 900px) {
     .main-header, .blogs-section {
