@@ -5,67 +5,355 @@
   <meta name="viewport" content="width=1024" />
   <title>AfriStyle Users Dashboard</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7ab9b9ccff.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="dashboard-container">
+   <div class="dashboard-container">
     <aside class="sidebar">
-      <div>
-        <div class="logo">
-          <!-- Logo image at the side of AfriStyle -->
-          <img src="Assets/afrilogo.jpg" alt="AfriStyle Logo" class="logo-img" />
-          AfriStyle
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <span class="sidebar-icon">
-                <!-- Dashboard SVG Icon -->
-                <img src="Assets/dashboard.jpg" alt="dashboard" height="20">
-              </span>
-              Dashboard
-            </li>
-            <li>
-              <span class="sidebar-icon">
-                <!-- Styles SVG Icon -->
-               <img src="Assets/styles.jpg" alt="styles" height="20">
-              </span>
-              Styles
-            </li>
-            <li>
-              <span class="sidebar-icon">
-                <!-- Blogs SVG Icon -->
-                <img src="Assets/blogs.png" alt="blogs" height="20">
-              </span>
-              Blogs
-            </li>
-            <li class="active">
-              <span class="sidebar-icon">
-                <!-- Users SVG Icon -->
-                <img src="Assets/user.png" alt="user" height="20">
-              </span>
-              Users
-            </li>
-          </ul>
-        </nav>
+      <div class="logo"><img src="./image/1001278732 1.png"> AfriStyle</div>
+
+      <div class="aside-nav">
+        <ul>
+          <li><i class="ri-function-fill"></i></i> Dashboard</li>
+          <li><i class="ri-shopping-bag-2-fill"></i> Styles</li>
+          <li><i class="ri-book-open-fill"></i> Blogs</li>
+          <li class="active"><i class="ri-group-fill"></i> Users</li>
+        </ul>
+        <div class="logout"><i class="ri-logout-box-line"></i> Log out</div>
       </div>
-      <div class="logout">
-      <img src="Assets/logout.png" alt="Logout" class="logout-img" height="20"/> Log out
-</div>
     </aside>
+
     <main class="main-content">
       <header class="main-header">
-        <input class="search-bar" type="text" placeholder="Search blogs, styles, users..."/>
+        <input class="search-bar" type="text" placeholder="Search blogs, styles, users..." />
+
         <div class="header-actions">
-           <img class="icon-bell" src="Assets/notification.png" alt="Notifications" />
+          <i class="fa-regular fa-bell"></i>
           <span class="admin-avatar">
-            <img src="Assets/Frame 895.jpg" alt="Admin"/>
+
+            <img src="./image/Frame 886.png" alt="Admin" />
             <span>
-              Adam Smith<br/>
-              <small>adamsmith@gmail.com</small>
+              Admin<br />
+              <small>adminuser@gmail.com</small>
             </span>
           </span>
         </div>
       </header>
+      <hr class="h-rule">
+      <section class="users-section">
+        <h2>Users <span class="users-count">(1245)</span></h2>
+
+        <div class="users-toolbar">
+          <input class="table-search" placeholder="Search Users"/>
+          <div class="toolbar-actions">
+            <button><i class="ri-upload-line"></i> Export</button>
+            <button><i class="ri-filter-3-line"></i> Filter</button>
+
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table class="users-table">
+            <colgroup>
+              <col class="col1">
+              <col class="col2">
+              <col class="col3">
+              <col class="col4">
+              <col class="col5">
+              <col class="col6">
+              <col class="col7">
+            </colgroup>
+            <thead>
+              <tr>
+                <th><input type="checkbox" /></th>
+                <th>User</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Last Active</th>
+                <th>Date Joined</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td class="truncate">
+                  <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
+                  Savannah Nguyen
+                </td>
+                <td>savannahnyugen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>15th May, 2023</td>
+                <td>15th May, 2023</td>
+                <td>
+                  <div class="menu-wrapper">
+                    <button id="btn">⋮</button>
+                    <div class="menu-options">
+                      <button class="edit"><i class="ri-pencil-line"></i> Edit</button>
+                      <button class="delete"><i class="ri-delete-bin-line"></i> Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td class="truncate">
+                  <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
+                  Marvin McKinney
+                </td>
+                <td>savannahnyugen@gmail.com</td>
+                <td><span class="status-badge status-disabled">Disabled</span></td>
+                <td>15th May, 2023</td>
+                <td>15th May, 2023</td>
+                <td>
+                  <div class="menu-wrapper">
+                    <button id="btn">⋮</button>
+                    <div class="menu-options">
+                      <button class="edit"><i class="ri-pencil-line"></i> Edit</button>
+                      <button class="delete"><i class="ri-delete-bin-line"></i> Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td class="truncate">
+                  <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
+                  Dianne Russell
+                </td>
+                <td>savannahnyugen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>15th May, 2023</td>
+                <td>15th May, 2023</td>
+                <td>
+                  <div class="menu-wrapper">
+                    <button id="btn">⋮</button>
+                    <div class="menu-options">
+                      <button class="edit"><i class="ri-pencil-line"></i> Edit</button>
+                      <button class="delete"><i class="ri-delete-bin-line"></i> Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td class="truncate">
+                  <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
+                  Cameron Williamson
+                </td>
+                <td>savannahnyugen@gmail.com</td>
+                <td><span class="status-badge status-disabled">Disabled</span></td>
+                <td>15th May, 2023</td>
+                <td>15th May, 2023</td>
+                <td>
+                  <div class="menu-wrapper">
+                    <button id="btn">⋮</button>
+                    <div class="menu-options">
+                      <button class="edit"><i class="ri-pencil-line"></i> Edit</button>
+                      <button class="delete"><i class="ri-delete-bin-line"></i> Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td class="truncate">
+                  <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
+                  Eleanor Pena
+                </td>
+                <td>savannahnyugen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>15th May, 2023</td>
+                <td>15th May, 2023</td>
+                <td>
+                  <div class="menu-wrapper">
+                    <button id="btn">⋮</button>
+                    <div class="menu-options">
+                      <button class="edit"><i class="ri-pencil-line"></i> Edit</button>
+                      <button class="delete"><i class="ri-delete-bin-line"></i> Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td class="truncate">
+                  <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
+                  Arlene McCoy
+                </td>
+                <td>savannahnyugen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>15th May, 2023</td>
+                <td>15th May, 2023</td>
+                <td>
+                  <div class="menu-wrapper">
+                    <button id="btn">⋮</button>
+                    <div class="menu-options">
+                      <button class="edit"><i class="ri-pencil-line"></i> Edit</button>
+                      <button class="delete"><i class="ri-delete-bin-line"></i> Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td class="truncate">
+                  <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
+                  Devon Lane
+                </td>
+                <td>savannahnyugen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>15th May, 2023</td>
+                <td>15th May, 2023</td>
+                <td>
+                  <div class="menu-wrapper">
+                    <button id="btn">⋮</button>
+                    <div class="menu-options">
+                      <button class="edit"><i class="ri-pencil-line"></i> Edit</button>
+                      <button class="delete"><i class="ri-delete-bin-line"></i> Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td class="truncate">
+                  <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
+                  Floyd Miles
+                </td>
+                <td>savannahnyugen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>15th May, 2023</td>
+                <td>15th May, 2023</td>
+                <td>
+                  <div class="menu-wrapper">
+                    <button id="btn">⋮</button>
+                    <div class="menu-options">
+                      <button class="edit"><i class="ri-pencil-line"></i> Edit</button>
+                      <button class="delete"><i class="ri-delete-bin-line"></i> Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td class="truncate">
+                  <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
+                 Kristin Watson
+                </td>
+                <td>savannahnyugen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>15th May, 2023</td>
+                <td>15th May, 2023</td>
+                <td>
+                  <div class="menu-wrapper">
+                    <button id="btn">⋮</button>
+                    <div class="menu-options">
+                      <button class="edit"><i class="ri-pencil-line"></i> Edit</button>
+                      <button class="delete"><i class="ri-delete-bin-line"></i> Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td class="truncate">
+                  <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
+                  Leslie Alexander
+                </td>
+                <td>savannahnyugen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>15th May, 2023</td>
+                <td>15th May, 2023</td>
+                <td>
+                  <div class="menu-wrapper">
+                    <button id="btn">⋮</button>
+                    <div class="menu-options">
+                      <button class="edit"><i class="ri-pencil-line"></i> Edit</button>
+                      <button class="delete"><i class="ri-delete-bin-line"></i> Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td class="truncate">
+                  <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
+                  Wade Warren
+                </td>
+                <td>savannahnyugen@gmail.com</td>
+                <td><span class="status-badge status-active">Active</span></td>
+                <td>15th May, 2023</td>
+                <td>15th May, 2023</td>
+                <td>
+                  <div class="menu-wrapper">
+                    <button id="btn">⋮</button>
+                    <div class="menu-options">
+                      <button class="edit"><i class="ri-pencil-line"></i> Edit</button>
+                      <button class="delete"><i class="ri-delete-bin-line"></i> Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td class="truncate">
+                  <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
+                  Courtney Henry
+                </td>
+                <td>savannahnyugen@gmail.com</td>
+                <td><span class="status-badge status-disabled">Disabled</span></td>
+                <td>15th May, 2023</td>
+                <td>15th May, 2023</td>
+                <td>
+                  <div class="menu-wrapper">
+                    <button id="btn">⋮</button>
+                    <div class="menu-options">
+                      <button class="edit"><i class="ri-pencil-line"></i> Edit</button>
+                      <button class="delete"><i class="ri-delete-bin-line"></i> Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-footer">
+          <div class="rows-per-page">
+            Rows per Page
+            <select>
+              <option>12</option>
+              <option>24</option>
+              <option>36</option>
+            </select>
+          </div>
+          <div class="pagination">
+            <button>&lt;</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="active">4</button>
+            <span>...</span>
+            <button>19</button>
+            <button>20</button>
+            <button>&gt;</button>
+          </div>
+          <div class="showing-info">
+            Showing 1 - 12 of 1245
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+
+
+
+  <!-- <div class="dashboard-container">
+
+
+
       <section class="users-section">
         <h2>Users <span class="users-count">(1245)</span></h2>
         <div class="users-toolbar">
@@ -225,6 +513,6 @@
         </div>
       </section>
     </main>
-  </div>
+  </div> -->
 </body>
 </html>

@@ -59,7 +59,7 @@
           <div class="toolbar-actions">
             <button><i class="ri-upload-line"></i> Export</button>
             <button><i class="ri-filter-3-line"></i> Filter</button>
-            <button class="add-blog">+ Add Blog</button>
+            <button class="add-blog" id="addBlogBtn">+ Add Blog</button>
           </div>
         </div>
         <div class="table-wrapper">
@@ -87,7 +87,88 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- <div class="table-footer">
+          <div class="rows-per-page">
+            Rows per Page
+            <select>
+              <option>12</option>
+              <option>24</option>
+              <option>36</option>
+            </select>
+          </div>
+          <div class="pagination">
+            <button>&lt;</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="active">4</button>
+            <span>...</span>
+            <button>19</button>
+            <button>20</button>
+            <button>&gt;</button>
+          </div>
+          <div class="showing-info">
+            Showing 1 - 12 of 1245
+          </div>
+        </div> -->
+
+         <!-- Blog Modal -->
+        <div id="blogModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-content-heading">
+              <h2>Add New Blog</h2>
+              <i class="ri-close-line close"></i>
+            </div>
+
+            <form id="blogForm">
+              <input type="text" id="title" placeholder="Title" required><br>
+              <div class="image-upload-container" id="imageUploadContainer">
+                <span id="uploadText">Upload an image</span>
+                <input type="file" id="image" accept="image/*">
+                <img id="imagePreview" src="" alt="Preview" style="display: none;">
+                <button type="button" id="removeImageBtn" class="remove-btn" style="display: none;">
+                  <i class="ri-close-line"></i>
+                </button>
+              </div>
+              <input type="text" id="category" placeholder="Category" required><br>
+              <textarea id="content" placeholder="Content" required></textarea><br>
+              <select id="status">
+                <option value="Published">Published</option>
+                <option value="Draft">Draft</option>
+                <option value="Archived">Archived</option>
+              </select><br>
+              <input type="number" id="views" placeholder="Views" value="0" readonly><br>
+              <button type="submit">Save Blog</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+  </div>
+
+
+
+  <script src="main.js"> </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+          <!--
+          <tr>
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
@@ -339,41 +420,4 @@
                   </div>
                 </td>
               </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="table-footer">
-          <div class="rows-per-page">
-            Rows per Page
-            <select>
-              <option>12</option>
-              <option>24</option>
-              <option>36</option>
-            </select>
-          </div>
-          <div class="pagination">
-            <button>&lt;</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="active">4</button>
-            <span>...</span>
-            <button>19</button>
-            <button>20</button>
-            <button>&gt;</button>
-          </div>
-          <div class="showing-info">
-            Showing 1 - 12 of 1245
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-
-
-
-  <script src="main.js"> </script>
-</body>
-
-</html>
+            -->
