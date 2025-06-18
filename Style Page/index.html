@@ -15,12 +15,12 @@
 
       <div class="aside-nav">
         <ul>
-          <li><i class="ri-function-fill"></i></i> Dashboard</li>
-          <a href="../Style Page/index.html"><li><i class="ri-shopping-bag-2-fill"></i> Styles</li></a>
-          <a href="../blog page/index.html"><li><i class="ri-book-open-fill"></i> Blogs</li></a>
-          <li class="active"><i class="ri-group-fill"></i> Users</li>
+          <li><i class="ri-function-fill"></i> Dashboard</li>
+          <li class="active"><i class="ri-shopping-bag-2-fill"></i> Styles</li>
+          <a href="../blog page/index.html"> <li><i class="ri-book-open-fill"></i> Blogs</li></a> 
+          <a href="../USER-PAGE/index.html"> <li><i class="ri-group-fill"></i> Users</li></a> 
         </ul>
-        <div class="logout"><a href="../Login Page/login.html"><i class="ri-logout-box-line"></i> Log out</a></div>
+        <div class="logout"> <a href="../Login Page/login.html"><i class="ri-logout-box-line"></i> Log out</a></div>
       </div>
     </aside>
 
@@ -42,14 +42,14 @@
       </header>
       <hr class="h-rule">
       <section class="users-section">
-        <h2>Users <span class="users-count">(1245)</span></h2>
+        <h2>Style <span class="users-count">(1245)</span></h2>
 
         <div class="users-toolbar">
           <input class="table-search" placeholder="Search Users"/>
           <div class="toolbar-actions">
             <button><i class="ri-upload-line"></i> Export</button>
             <button><i class="ri-filter-3-line"></i> Filter</button>
-
+            <button class="add-style"><i class="ri-add-line"></i>Add style</button>
           </div>
         </div>
         <div class="table-wrapper">
@@ -66,11 +66,12 @@
             <thead>
               <tr>
                 <th><input type="checkbox" /></th>
-                <th>User</th>
-                <th>Email</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Amount</th>
                 <th>Status</th>
-                <th>Last Active</th>
-                <th>Date Joined</th>
+                <th>Date published</th>
+                <th>Actions</th>
                 <th></th>
               </tr>
             </thead>
@@ -79,12 +80,12 @@
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
-                  Savannah Nguyen
+                  SIWES 1
                 </td>
-                <td>savannahnyugen@gmail.com</td>
-                <td><span class="status-badge status-active">Active</span></td>
-                <td>15th May, 2023</td>
-                <td>15th May, 2023</td>
+                <td>SEN 299</td>
+                <td>3</td>
+                <td><span class="status-badge status-active">Published</span></td>
+                <td class="date_published">15th May, 2023 - 12:30am</td>
                 <td>
                   <div class="menu-wrapper">
                     <button id="btn">⋮</button>
@@ -99,12 +100,12 @@
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
-                  Marvin McKinney
+                  Digital Logic Design
                 </td>
-                <td>savannahnyugen@gmail.com</td>
-                <td><span class="status-badge status-disabled">Disabled</span></td>
-                <td>15th May, 2023</td>
-                <td>15th May, 2023</td>
+                <td>IFT 211</td>
+                <td>2</td>
+                <td><span class="status-badge status-disabled">Draft</span></td>
+                <td class="date_published">15th May, 2023 -12:30am</td>
                 <td>
                   <div class="menu-wrapper">
                     <button id="btn">⋮</button>
@@ -119,12 +120,12 @@
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
-                  Dianne Russell
+                  Enterpreneurship and Innovation
                 </td>
-                <td>savannahnyugen@gmail.com</td>
-                <td><span class="status-badge status-active">Active</span></td>
-                <td>15th May, 2023</td>
-                <td>15th May, 2023</td>
+                <td>SEN 210</td>
+                <td>3</td>
+                <td><span class="status-badge status-pending">Pending</span></td>
+                <td class="date_published">15th May, 2023 - 12:30am</td>
                 <td>
                   <div class="menu-wrapper">
                     <button id="btn">⋮</button>
@@ -139,12 +140,12 @@
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
-                  Cameron Williamson
+                  Enterpreneurship and Innovation
                 </td>
-                <td>savannahnyugen@gmail.com</td>
-                <td><span class="status-badge status-disabled">Disabled</span></td>
-                <td>15th May, 2023</td>
-                <td>15th May, 2023</td>
+                <td>MTH 210</td>
+                <td>3</td>
+                <td><span class="status-badge status-active">Paid</span></td>
+                <td class="date_published">15th May, 2023 - 12:30am</td>
                 <td>
                   <div class="menu-wrapper">
                     <button id="btn">⋮</button>
@@ -159,12 +160,12 @@
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
-                  Eleanor Pena
+                  Enterpreneurship and Innovation
                 </td>
-                <td>savannahnyugen@gmail.com</td>
-                <td><span class="status-badge status-active">Active</span></td>
-                <td>15th May, 2023</td>
-                <td>15th May, 2023</td>
+                <td>SEN 201</td>
+                <td>2</td>
+                <td><span class="status-badge status-active">Paid</span></td>
+                <td class="date_published">15th May, 2023 - 12:30am</td>
                 <td>
                   <div class="menu-wrapper">
                     <button id="btn">⋮</button>
@@ -179,12 +180,12 @@
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
-                  Arlene McCoy
+                  Enterpreneurship and Innovation
                 </td>
-                <td>savannahnyugen@gmail.com</td>
-                <td><span class="status-badge status-active">Active</span></td>
-                <td>15th May, 2023</td>
-                <td>15th May, 2023</td>
+                <td>COS 201</td>
+                <td>3</td>
+                <td><span class="status-badge status-active">Paid</span></td>
+                <td class="date_published">15th May, 2023-12:30am</td>
                 <td>
                   <div class="menu-wrapper">
                     <button id="btn">⋮</button>
@@ -199,12 +200,12 @@
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
-                  Devon Lane
+                  Enterpreneurship and Innovation
                 </td>
-                <td>savannahnyugen@gmail.com</td>
-                <td><span class="status-badge status-active">Active</span></td>
-                <td>15th May, 2023</td>
-                <td>15th May, 2023</td>
+                <td>SEN 204</td>
+                <td>2</td>
+                <td><span class="status-badge status-pending">Pending</span></td>
+                <td class="date_published">15th May, 2023-12:30am</td>
                 <td>
                   <div class="menu-wrapper">
                     <button id="btn">⋮</button>
@@ -219,12 +220,12 @@
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
-                  Floyd Miles
+                  Enterpreneurship and Innovation
                 </td>
-                <td>savannahnyugen@gmail.com</td>
-                <td><span class="status-badge status-active">Active</span></td>
-                <td>15th May, 2023</td>
-                <td>15th May, 2023</td>
+                <td>SEN 204</td>
+                <td>2</td>
+                <td><span class="status-badge status-pending">Pending</span></td>
+                <td class="date_published">15th May, 2023-12:30am</td>
                 <td>
                   <div class="menu-wrapper">
                     <button id="btn">⋮</button>
@@ -239,12 +240,12 @@
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
-                 Kristin Watson
+                  Enterpreneurship and Innovation
                 </td>
-                <td>savannahnyugen@gmail.com</td>
-                <td><span class="status-badge status-active">Active</span></td>
-                <td>15th May, 2023</td>
-                <td>15th May, 2023</td>
+                <td>SEN 204</td>
+                <td>2</td>
+                <td><span class="status-badge status-pending">Pending</span></td>
+                <td class="date_published">15th May, 2023-12:30am</td>
                 <td>
                   <div class="menu-wrapper">
                     <button id="btn">⋮</button>
@@ -259,12 +260,12 @@
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
-                  Leslie Alexander
+                  Enterpreneurship and Innovation
                 </td>
-                <td>savannahnyugen@gmail.com</td>
-                <td><span class="status-badge status-active">Active</span></td>
-                <td>15th May, 2023</td>
-                <td>15th May, 2023</td>
+                <td>SEN 204</td>
+                <td>2</td>
+                <td><span class="status-badge status-pending">Pending</span></td>
+                <td class="date_published">15th May, 2023-12:30am</td>
                 <td>
                   <div class="menu-wrapper">
                     <button id="btn">⋮</button>
@@ -279,12 +280,12 @@
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
-                  Wade Warren
+                  Enterpreneurship and Innovation
                 </td>
-                <td>savannahnyugen@gmail.com</td>
-                <td><span class="status-badge status-active">Active</span></td>
-                <td>15th May, 2023</td>
-                <td>15th May, 2023</td>
+                <td>SEN 204</td>
+                <td>2</td>
+                <td><span class="status-badge status-pending">Pending</span></td>
+                <td class="date_published">15th May, 2023-12:30am</td>
                 <td>
                   <div class="menu-wrapper">
                     <button id="btn">⋮</button>
@@ -299,12 +300,12 @@
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
                   <img src="./image/Frame 886.png" class="author-avatar" alt="avatar" />
-                  Courtney Henry
+                  Enterpreneurship and Innovation
                 </td>
-                <td>savannahnyugen@gmail.com</td>
-                <td><span class="status-badge status-disabled">Disabled</span></td>
-                <td>15th May, 2023</td>
-                <td>15th May, 2023</td>
+                <td>SEN 204</td>
+                <td>2</td>
+                <td><span class="status-badge status-disabled">Failed</span></td>
+                <td class="date_published">15th May, 2023-12:30am</td>
                 <td>
                   <div class="menu-wrapper">
                     <button id="btn">⋮</button>
@@ -514,5 +515,6 @@
       </section>
     </main>
   </div> -->
+  <script src="main.js"></script>
 </body>
 </html>
