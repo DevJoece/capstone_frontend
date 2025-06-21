@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1024" />
@@ -8,8 +9,9 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/7ab9b9ccff.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-   <div class="dashboard-container">
+  <div class="dashboard-container">
     <aside class="sidebar">
       <div class="logo"><img src="./image/1001278732 1.png"> AfriStyle</div>
 
@@ -17,8 +19,12 @@
         <ul>
           <li><i class="ri-function-fill"></i> Dashboard</li>
           <li class="active"><i class="ri-shopping-bag-2-fill"></i> Styles</li>
-          <a href="../blog page/index.html"> <li><i class="ri-book-open-fill"></i> Blogs</li></a> 
-          <a href="../USER-PAGE/index.html"> <li><i class="ri-group-fill"></i> Users</li></a> 
+          <a href="../blog page/index.html">
+            <li><i class="ri-book-open-fill"></i> Blogs</li>
+          </a>
+          <a href="../USER-PAGE/index.html">
+            <li><i class="ri-group-fill"></i> Users</li>
+          </a>
         </ul>
         <div class="logout"> <a href="../Login Page/login.html"><i class="ri-logout-box-line"></i> Log out</a></div>
       </div>
@@ -42,18 +48,18 @@
       </header>
       <hr class="h-rule">
       <section class="users-section">
-        <h2>Style <span class="users-count">(1245)</span></h2>
+        <h2>Style <span class="users-count" id="styleCount">(0)</span></h2>
 
         <div class="users-toolbar">
-          <input class="table-search" placeholder="Search Users"/>
+          <input class="table-search" placeholder="Search Users" />
           <div class="toolbar-actions">
             <button><i class="ri-upload-line"></i> Export</button>
             <button><i class="ri-filter-3-line"></i> Filter</button>
-            <button class="add-style"><i class="ri-add-line"></i>Add style</button>
+            <button class="add-style" id="addStyleBtn"><i class="ri-add-line"></i>Add style</button>
           </div>
         </div>
         <div class="table-wrapper">
-          <table class="users-table">
+          <table class="styles-table">
             <colgroup>
               <col class="col1">
               <col class="col2">
@@ -61,21 +67,91 @@
               <col class="col4">
               <col class="col5">
               <col class="col6">
-              <col class="col7">
+              <!-- <col class="col7"> -->
             </colgroup>
             <thead>
               <tr>
                 <th><input type="checkbox" /></th>
+                <th>Title</th>
                 <th>Description</th>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>Status</th>
+                <th>Category</th>
                 <th>Date published</th>
                 <th>Actions</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
+
+            </tbody>
+          </table>
+        </div>
+
+
+        <div id="styleModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-content-heading">
+              <h2>Add New Outfit</h2>
+              <i class="ri-close-line close"></i>
+            </div>
+            <hr class="add-style-rule">
+            <form id="styleForm">
+              <label class="add-style-title">Title</label><br>
+              <input type="text" id="title" required><br>
+              <div class="image-upload-container" id="imageUploadContainer">
+                <span id="uploadText">Upload an image</span>
+                <input type="file" id="image" accept="image/*"  multiple>
+                <img id="imagePreview" src="" alt="Preview" style="display: none;">
+                <button type="button" id="removeImageBtn" class="remove-btn" style="display: none;">
+                  <i class="ri-close-line"></i>
+                </button>
+              </div>
+              <label class="add-style-title">Category</label><br>
+              <select id="category" required>
+                <!-- <option value="" disabled selected>Select category</option> -->
+                 <option value='{"_id":"851e8c8b-ecdd-458a-b8af-870fc908f318", "name":"Traditional"}'>Traditional</option>
+                 <option value='{"_Id":"5778cda8-dca8-4ca9-812a-02888bc4df8e", "name":"Office"}'>Office</option>
+                 <option value='{"_Id":"894ad7bc-5180-4e49-9c2f-bdb876bf1740", "name":"Office"}'>Wedding</option>
+              </select>
+              <br>
+              <label class="add-style-title">Style Description</label><br>
+              <textarea id="description" required></textarea><br>
+              <input type="number" id="views" placeholder="Views" value="0" readonly><br>
+              <button class="save-style" type="submit" id="saveStyle">Save Style</button>
+            </form>
+          </div>
+        </div>
+
+
+        <div id="viewModal" class="modal">
+          <div class="view-modal-content">
+            <span class="close-view"><i class="ri-close-line"></i></span>
+            <div id="viewImageContainer">
+              <img id="viewImage" src="" alt="Style Image" />
+            </div>
+
+            <div class="modal-header">
+              <h2 id="viewTitle"></h2>
+              <p id="viewDescription"></p>
+              <strong id="viewCategory"></strong>
+            </div>
+          </div>
+
+
+        </div>
+  </div>
+  </section>
+  </main>
+  </div>
+
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
+
+
+<!-- <tbody>
               <tr>
                 <td><input type="checkbox" /></td>
                 <td class="truncate">
@@ -344,14 +420,13 @@
             Showing 1 - 12 of 1245
           </div>
         </div>
-      </section>
-    </main>
-  </div>
+      </section> -->
 
 
 
 
-  <!-- <div class="dashboard-container">
+
+<!-- <div class="dashboard-container">
 
 
 
@@ -515,6 +590,3 @@
       </section>
     </main>
   </div> -->
-  <script src="main.js"></script>
-</body>
-</html>
